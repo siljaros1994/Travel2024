@@ -119,6 +119,12 @@ section {
   color:var(--main-color);
 }
 
+.header .navbar .active {
+  color: var(--main-color);
+  border-bottom: .1rem solid var(--main-color);
+  padding-bottom: .3rem;
+}
+
 #hotel-btn{
   display: none;
 }
@@ -446,10 +452,6 @@ section {
 }
 
 @media (max-width: 768px) {
-  #menu-btn {
-      display: inline-block;
-  }
-
   .header .navbar {
       position: absolute;
       top: 100%;
