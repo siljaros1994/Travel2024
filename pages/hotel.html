@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Hotels</title>
   <link rel="stylesheet" href="../css/hotel.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
   <header class="header">
@@ -30,10 +32,8 @@
     
     <div class="container">
       <div class="card">
-        <div class="slider">
-          <ul>
-            <li></li>
-          </ul>
+        <div class="slider slideshow__container js-slideshow">
+          <img v-for="(slide, index) in slides" :key="slide.id" :src="slide.url" :alt="slide.title" :class="{ active: isActive(index) }">
         </div>
 
         <div class="content">
@@ -57,5 +57,7 @@
       </div>
     </div>
   </main>
+
+  <script src="../js/hotel.js"></script>
 </body>
 </html>
