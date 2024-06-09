@@ -8,37 +8,37 @@ const data = [
   },
   {
       place:'Mellieha',
-      title:'NANGANO',
-      title2:'PREFECTURE',
-      description:'Nagano Prefecture, set within the majestic Japan Alps, is a cultural treasure trove with its historic shrines and temples, particularly the famous Zenkō-ji. The region is also a hotspot for skiing and snowboarding, offering some of the country\'s best powder.',
+      title:'	Northern',
+      title2:'Region',
+      description:'Mellieha is a large village in the Northern Region of Malta. Mellieħa is also a tourist resort, popular for its sandy beaches, natural environment, and Popeye Village nearby',
       image:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Mellieha_Church.jpg/2880px-Mellieha_Church.jpg'
   },
   {
       place:'Saint Julian\'s',
-      title:'MARRAKECH',
-      title2:'MEROUGA',
-      description:'The journey from the vibrant souks and palaces of Marrakech to the tranquil, starlit sands of Merzouga showcases the diverse splendor of Morocco. Camel treks and desert camps offer an unforgettable immersion into the nomadic way of life.',
+      title:'Eastern',
+      title2:'Region',
+      description:'Saint Julian\'s is a town in the Eastern Region of Malta. It is situated along the coast, north of the country\'s capital, Valletta. It is known for tourism-oriented businesses, such as hotels, restaurants and nightclubs which are centred mainly in an area known as Paceville.',
       image:'https://i.pinimg.com/originals/b5/37/dd/b537dda76287f84dc15db95b5db07947.jpg'
   },
   {
       place:'Popeye Village',
-      title:'YOSEMITE',
-      title2:'NATIONAL PARAK',
-      description:'Yosemite National Park is a showcase of the American wilderness, revered for its towering granite monoliths, ancient giant sequoias, and thundering waterfalls. The park offers year-round recreational activities, from rock climbing to serene valley walks.',
+      title:'Northern',
+      title2:'Region',
+      description:'Popeye Village also known as Sweethaven Village, is a purpose-built film set village that has been converted into a small attraction fun park, consisting of a collection of rustic and ramshackle wooden buildings.',
       image:'https://i.pinimg.com/originals/d5/b5/8a/d5b58ad0a3b5de70fa3f60ddbfcafb81.jpg'
   },
   {
       place:'Sliema',
-      title:'LOS LANCES',
-      title2:'BEACH',
-      description:'Los Lances Beach in Tarifa is a coastal paradise known for its consistent winds, making it a world-renowned spot for kitesurfing and windsurfing. The beach\'s long, sandy shores provide ample space for relaxation and sunbathing, with a vibrant atmosphere of beach bars and cafes.',
+      title:'	Eastern',
+      title2:'Region',
+      description:'Sliema is a town located on the northeast coast of Malta in the Northern Harbour District. It is a major residential and commercial area and a centre for shopping, bars, dining, and café life.',
       image:'https://sthotelsmalta.com/wp-content/uploads/2019/02/14326956708_5fe2e138c6_b_resize_0.jpg'
   },
   {
       place:'Mdina',
       title:'Göreme',
       title2:'Valley',
-      description:'Göreme Valley in Cappadocia is a historical marvel set against a unique geological backdrop, where centuries of wind and water have sculpted the landscape into whimsical formations. The valley is also famous for its open-air museums, underground cities, and the enchanting experience of hot air ballooning.',
+      description:'Mdina is a fortified city, which served as the island's capital from antiquity to the medieval period. The city is still confined within its walls',
       image:'https://historichotelsofeurope.com/wp-content/uploads/2023/11/malta-mdina.jpg'
   },
 ]
