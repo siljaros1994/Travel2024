@@ -36,8 +36,8 @@ const data = [
   },
   {
       place:'Mdina',
-      title:'Göreme',
-      title2:'Valley',
+      title:'	Northern',
+      title2:'Region',
       description:'Mdina is a fortified city, which served as the island's capital from antiquity to the medieval period. The city is still confined within its walls',
       image:'https://historichotelsofeurope.com/wp-content/uploads/2023/11/malta-mdina.jpg'
   },
