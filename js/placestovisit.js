@@ -35,7 +35,7 @@ const data = [
       image:'https://sthotelsmalta.com/wp-content/uploads/2019/02/14326956708_5fe2e138c6_b_resize_0.jpg'
   },
   {
-      place:'Gozo ',
+      place:'Gozo',
       title:'South of Sicily',
       title2:'Mediterranean Sea',
       description:'Gozo  is an island in the Maltese archipelago in the Mediterranean Sea. The island is part of the Republic of Malta. After the island of Malta itself, it is the second-largest island in the archipelago.',
@@ -52,7 +52,7 @@ const data = [
       place:'Mdina',
       title:'	Northern',
       title2:'Region',
-      description:'Mdina is a fortified city, which served as the island's capital from antiquity to the medieval period. The city is still confined within its walls',
+      description:'Mdina is a fortified city, which served as the island\'s capital from antiquity to the medieval period. The city is still confined within its walls',
       image:'https://historichotelsofeurope.com/wp-content/uploads/2023/11/malta-mdina.jpg'
   },
 ]
@@ -102,7 +102,7 @@ return new Promise((resolve) => {
 });
 }
 
-let order = [0, 1, 2, 3, 4, 5];
+let order = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 let detailsEven = true;
 
 let offsetTop = 200;
