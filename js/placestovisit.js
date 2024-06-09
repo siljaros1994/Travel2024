@@ -35,6 +35,20 @@ const data = [
       image:'https://sthotelsmalta.com/wp-content/uploads/2019/02/14326956708_5fe2e138c6_b_resize_0.jpg'
   },
   {
+      place:'Gozo ',
+      title:'South of Sicily',
+      title2:'Mediterranean Sea',
+      description:'Gozo  is an island in the Maltese archipelago in the Mediterranean Sea. The island is part of the Republic of Malta. After the island of Malta itself, it is the second-largest island in the archipelago.',
+      image:'https://i.pinimg.com/564x/ac/66/41/ac664145dcdc6f9ffc431ff6e288b422.jpg'
+  },
+  {
+      place:'comino',
+      title:'	Eastern',
+      title2:'Region',
+      description:'comino is a small island of the Maltese archipelago between the islands of Malta and Gozo in the Mediterranean Sea. The island is a bird sanctuary and nature reserve. ',
+      image:'https://i.pinimg.com/564x/e4/91/52/e491522d8087901848cb02430f0817c1.jpg'
+  },
+  {
       place:'Mdina',
       title:'	Northern',
       title2:'Region',
@@ -42,7 +56,6 @@ const data = [
       image:'https://historichotelsofeurope.com/wp-content/uploads/2023/11/malta-mdina.jpg'
   },
 ]
-
 
 const _ = (id)=>document.getElementById(id)
 const cards = data.map((i, index)=>`<div class="card" id="card${index}" style="background-image:url(${i.image})"  ></div>`).join('')
