@@ -8,7 +8,7 @@ const data = [
   },
   {
       place:'Mellieha',
-      title:'	Northern',
+      title:'Northern',
       title2:'Region',
       description:'Mellieha is a large village in the Northern Region of Malta. Mellieħa is also a tourist resort, popular for its sandy beaches, natural environment, and Popeye Village nearby',
       image:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Mellieha_Church.jpg/2880px-Mellieha_Church.jpg'
@@ -29,7 +29,7 @@ const data = [
   },
   {
       place:'Sliema',
-      title:'	Eastern',
+      title:'Eastern',
       title2:'Region',
       description:'Sliema is a town located on the northeast coast of Malta in the Northern Harbour District. It is a major residential and commercial area and a centre for shopping, bars, dining, and café life.',
       image:'https://sthotelsmalta.com/wp-content/uploads/2019/02/14326956708_5fe2e138c6_b_resize_0.jpg'
@@ -43,14 +43,14 @@ const data = [
   },
   {
       place:'comino',
-      title:'	Eastern',
+      title:'Eastern',
       title2:'Region',
       description:'comino is a small island of the Maltese archipelago between the islands of Malta and Gozo in the Mediterranean Sea. The island is a bird sanctuary and nature reserve. ',
       image:'https://i.pinimg.com/564x/e4/91/52/e491522d8087901848cb02430f0817c1.jpg'
   },
   {
       place:'Mdina',
-      title:'	Northern',
+      title:'Northern',
       title2:'Region',
       description:'Mdina is a fortified city, which served as the island\'s capital from antiquity to the medieval period. The city is still confined within its walls',
       image:'https://historichotelsofeurope.com/wp-content/uploads/2023/11/malta-mdina.jpg'
