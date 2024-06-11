@@ -20,113 +20,178 @@
 
 body {
   background-color: #1a1a1a;
-  color: #f5f1f1dd;
-  overflow: hidden;
+  color: #121212dd;
+  overflow: auto;
   font-family: 'Inter', sans-serif;
 }
 
-.header {
-    background: var(--bg);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 5%;
-    border-bottom: var(--border);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
-  
-  .header .logo img {
-    height: 4rem;
-  }
-  
-  .header .navbar a {
-    margin: 0 0.5rem;
-    font-size: 1.4rem;
-    color: #fff;
-  }
-  
-  .header .navbar a:hover {
-    color: var(--main-color);
-    border-bottom: .1rem solid var(--main-color);
-    padding-bottom: .3rem;
-  }
-  
-  .header .icons div {
-    color: #fff;
-    cursor: pointer;
-    font-size: 2rem;
-    margin-left: 1rem;
-  }
-  
-  .header .icons div:hover {
-    color: var(--main-color);
-  }
-  
-  .header .navbar .active {
-    color: var(--main-color);
-    border-bottom: .1rem solid var(--main-color);
-    padding-bottom: .3rem;
-  }
-  
 
-  @media (max-width: 991px) {
-    html {
-      font-size: 55%;
-    }
+.section {
+  padding: 8rem 5%;
+}
+
+h2 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 3rem; /* Adjust this value as needed */
+  text-align: center;
+}
+
+.header {
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5%;
+  border-bottom: var(--border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
   
-    .header {
-      padding: 1.5rem 2rem;
-    }
-  
-    section {
-      padding: 2rem;
-    }
+.header .logo img {
+  height: 4rem;
+}
+
+.header .navbar a {
+  margin: 0 0.5rem;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.header .navbar a:hover {
+  color: var(--main-color);
+  border-bottom: .1rem solid var(--main-color);
+  padding-bottom: .3rem;
+}
+
+.header .icons div {
+  color: #fff;
+  cursor: pointer;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.header .icons div:hover {
+  color: var(--main-color);
+}
+
+.header .navbar .active {
+  color: var(--main-color);
+  border-bottom: .1rem solid var(--main-color);
+  padding-bottom: .3rem;
+}
+
+.shopping-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 30px 50px 65px;
+}
+
+.shopping-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.shopping-card .container {
+  padding: 20px;
+}
+
+.shopping-card .city-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.shopping-card hr {
+  margin: 10px 0;
+  border: 0;
+  border-top: 1px solid #d3ad7f;
+}
+
+.shopping-card .content .info {
+  margin-bottom: 10px;
+}
+
+.shopping-card .content .info .company-name {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.shopping-card .content .info .address,
+.shopping-card .content .info .phone {
+  font-size: 14px;
+  color: #555;
+}
+
+.shopping-card .content img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
   }
-  
-  @media (max-width: 768px) {
-    .header .navbar {
-      position: absolute;
-      top: 100%;
-      right: -100%;
-      background: #fff;
-      width: 30rem;
-      height: calc(100vh - 9.5rem);
-    }
-  
-    .header .navbar.active {
-      right: 0;
-    }
-  
-    .header .navbar a {
-      color: var(--black);
-      display: block;
-      margin: 1.5rem;
-      padding: .5rem;
-      font-size: 2rem;
-    }
-  
-    .home {
-      background-position: left;
-      justify-content: center;
-      text-align: center;
-    }
-  
-    .home .content h3 {
-      font-size: 4.5rem;
-    }
-  
-    .home .content p {
-      font-size: 1rem;
-    }
+
+  .header {
+    padding: 1.5rem 2rem;
   }
-  
-  @media (max-width: 450px) {
-    html {
-      font-size: 50%;
-    }
+
+  section {
+    padding: 2rem;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: #fff;
+    width: 30rem;
+    height: calc(100vh - 9.5rem);
+  }
+
+  .header .navbar.active {
+    right: 0;
+  }
+
+  .header .navbar a {
+    color: var(--black);
+    display: block;
+    margin: 1.5rem;
+    padding: .5rem;
+    font-size: 2rem;
+  }
+
+  .home {
+    background-position: left;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .home .content h3 {
+    font-size: 4.5rem;
+  }
+
+  .home .content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .shopping-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
