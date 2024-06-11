@@ -6,6 +6,7 @@ document.querySelector('#menu-btn').onclick = () => {
     cartItem.classList.remove('active');
 }
 
+
 let searchForm = document.querySelector('.search-form');
 
 document.querySelector('#search-btn').onclick = () => {
@@ -13,6 +14,7 @@ document.querySelector('#search-btn').onclick = () => {
     navbar.classList.remove('active');
     cartItem.classList.remove('active');
 }
+
 
 let cartItem = document.querySelector('.cart-items-container');
 
