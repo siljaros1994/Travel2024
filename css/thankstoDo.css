@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 :root {
   --main-color: #d3ad7f;
   --black: #13131a;
   --bg: #010103;
   --border: .1rem solid rgba(255, 255, 255, .3);
+  --white: #fff;
+  --gray: #9B9B9B;
+  --heart: #17BEBB;
+  --star: #FFE500;
+  --button: #EF3E36;
 }
 
 * {
@@ -20,113 +26,196 @@
 
 body {
   background-color: #1a1a1a;
-  color: #f5f1f1dd;
-  overflow: hidden;
+  color: #020202dd;
   font-family: 'Inter', sans-serif;
 }
 
-.header {
-    background: var(--bg);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 5%;
-    border-bottom: var(--border);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
-  
-  .header .logo img {
-    height: 4rem;
-  }
-  
-  .header .navbar a {
-    margin: 0 0.5rem;
-    font-size: 1.4rem;
-    color: #fff;
-  }
-  
-  .header .navbar a:hover {
-    color: var(--main-color);
-    border-bottom: .1rem solid var(--main-color);
-    padding-bottom: .3rem;
-  }
-  
-  .header .icons div {
-    color: #fff;
-    cursor: pointer;
-    font-size: 2rem;
-    margin-left: 1rem;
-  }
-  
-  .header .icons div:hover {
-    color: var(--main-color);
-  }
-  
-  .header .navbar .active {
-    color: var(--main-color);
-    border-bottom: .1rem solid var(--main-color);
-    padding-bottom: .3rem;
-  }
-  
+.section {
+  padding: 8rem 5%;
+}
 
-  @media (max-width: 991px) {
-    html {
-      font-size: 55%;
-    }
-  
-    .header {
-      padding: 1.5rem 2rem;
-    }
-  
-    section {
-      padding: 2rem;
-    }
+h2 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 3rem; /* Adjust this value as needed */
+  text-align: center;
+}
+
+.header {
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5%;
+  border-bottom: var(--border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header .logo img {
+  height: 4rem;
+}
+
+.header .navbar a {
+  margin: 0 0.5rem;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.header .navbar a:hover {
+  color: var(--main-color);
+  border-bottom: .1rem solid var(--main-color);
+  padding-bottom: .3rem;
+}
+
+.header .icons div {
+  color: #fff;
+  cursor: pointer;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.header .icons div:hover {
+  color: var(--main-color);
+}
+
+.header .navbar .active {
+  color: var(--main-color);
+  border-bottom: .1rem solid var(--main-color);
+  padding-bottom: .3rem;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.card {
+  position: relative;
+  background: var(--white);
+  width: calc(25% - 40px);
+  margin: 20px;
+  box-shadow: 0px 0px 30px 2px #000;
+}
+
+.card .header {
+  background: url("your-image-url-1.jpg") no-repeat center;
+  background-size: cover;
+  min-height: 200px;
+  position: relative;
+}
+
+.card .header .icon a .fa-heart-o {
+  position: absolute;
+  left: 85%;
+  bottom: 10%;
+  background: var(--heart);
+  color: var(--white);
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0px 5px 30px 1px var(--heart);
+}
+
+.card .header .icon a .fa-heart-o.active {
+  background: red;
+  color: var(--white);
+}
+
+.card .text .event-title {
+  color: var(--black);
+  text-align: left;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 40px 20px;
+}
+
+.card .text .event-date {
+  color: var(--gray);
+  margin: 0 20px;
+}
+
+.card .event-description {
+  margin: 20px 40px;
+}
+
+.card a.btn {
+  display: block;
+  background: var(--button);
+  color: var(--white);
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 10px;
+  transition: 250ms;
+}
+
+.card a.btn:hover {
+  background: var(--heart);
+  transition: 250ms;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
   }
-  
-  @media (max-width: 768px) {
-    .header .navbar {
-      position: absolute;
-      top: 100%;
-      right: -100%;
-      background: #fff;
-      width: 30rem;
-      height: calc(100vh - 9.5rem);
-    }
-  
-    .header .navbar.active {
-      right: 0;
-    }
-  
-    .header .navbar a {
-      color: var(--black);
-      display: block;
-      margin: 1.5rem;
-      padding: .5rem;
-      font-size: 2rem;
-    }
-  
-    .home {
-      background-position: left;
-      justify-content: center;
-      text-align: center;
-    }
-  
-    .home .content h3 {
-      font-size: 4.5rem;
-    }
-  
-    .home .content p {
-      font-size: 1rem;
-    }
+
+  .header {
+    padding: 1.5rem 2rem;
   }
-  
-  @media (max-width: 450px) {
-    html {
-      font-size: 50%;
-    }
+
+  section {
+    padding: 2rem;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: #fff;
+    width: 30rem;
+    height: calc(100vh - 9.5rem);
+  }
+
+  .header .navbar.active {
+    right: 0;
+  }
+
+  .header .navbar a {
+    color: var(--black);
+    display: block;
+    margin: 1.5rem;
+    padding: .5rem;
+    font-size: 2rem;
+  }
+
+  .home {
+    background-position: left;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .home .content h3 {
+    font-size: 4.5rem;
+  }
+
+  .home .content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
