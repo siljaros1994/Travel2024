@@ -74,7 +74,6 @@ const cardContents = data.map((i, index) => `
     <div class="content-place">${i.place}</div>
     <div class="content-title-1">${i.title}</div>
     <div class="content-title-2">${i.title2}</div>
-    <div class="content-desc">${i.description}</div>
     <div class="cta">
       <button class="bookmark">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -235,6 +234,16 @@ function step(direction = 'next') {
     document.querySelector(`${detailsActive} .discover`).href = `../pages/${data[order[0]].link}`;
 
     animateElements(detailsActive, detailsInactive, resolve);
+
+    // Adjust the height of the next card in line
+    const nextCardIndex = order[1]; // The next card to become active
+    const newHeight = 450; // Set your desired height here
+
+    gsap.to(getCard(nextCardIndex), {
+      height: newHeight,
+      duration: 0.4,
+      ease: ease,
+    });
   });
 }
 
@@ -311,31 +320,32 @@ function transitionCards(detailsInactive) {
     },
   });
 
-rest.forEach((i, index) => {
-  if (i !== prv) {
-    const xNew = offsetLeft + index * (cardWidth + gap);
-    gsap.set(getCard(i), { zIndex: 30 });
-    gsap.to(getCard(i), {
-      x: xNew,
-      y: offsetTop,
-      width: cardWidth,
-      height: cardHeight,
-      ease,
-      delay: 0.15 * (index + 1),
-    });
+  rest.forEach((i, index) => {
+    if (i !== prv) {
+      const xNew = offsetLeft + index * (cardWidth + gap);
+      gsap.set(getCard(i), { zIndex: 30 });
+      gsap.to(getCard(i), {
+        x: xNew,
+        y: offsetTop,
+        width: cardWidth,
+        height: cardHeight,
+        ease,
+        delay: 0.15 * (index + 1),
+      });
 
-    gsap.to(getCardContent(i), {
-      x: xNew,
-      y: offsetTop + cardHeight - 100,
-      opacity: 1,
-      zIndex: 40,
-      ease,
-      delay: 0.15 * (index + 1),
-    });
-    gsap.to(getSliderItem(i), { x: (index + 1) * numberSize, ease });
-  }
-});
-};
+      gsap.to(getCardContent(i), {
+        x: xNew,
+        y: offsetTop + cardHeight - 100,
+        opacity: 1,
+        zIndex: 40,
+        ease,
+        delay: 0.15 * (index + 1),
+      });
+      gsap.to(getSliderItem(i), { x: (index + 1) * numberSize, ease });
+    }
+  });
+}
+
 
 async function loop() {
 await animate(".indicator", 1, { opacity: 1 });

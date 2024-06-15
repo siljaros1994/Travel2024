@@ -67,6 +67,10 @@ body {
   position: absolute;
   top: 240px;
   left: 60px;
+  width: 600px; /* adjust size here */
+  padding: 20px; /* add padding */
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .details .place-box {
@@ -93,27 +97,29 @@ body {
 .details .title-1,
 .details .title-2 {
   font-weight: 600;
-  font-size: 72px;
+  font-size: 48px; /* adjust size here 48px */
   font-family: 'Oswald', sans-serif;
 }
 
 .details .title-box-1,
 .details .title-box-2 {
   margin-top: 2px;
-  height: 100px;
+  height: 60px; /* adjust size here 60px */
   overflow: hidden;
 }
 
 .details > .desc {
   margin-top: 16px;
-  width: 500px;
+  width: 100%; /* adjust size here 100% */
+  font-size: 16px; /* adjust size here */
 }
 
 .details > .cta {
-  width: 500px;
+  width: 100%; /* adjust size here 100%*/
   margin-top: 24px;
   display: flex;
   align-items: center;
+  justify-content: baseline;
 }
 
 .details > .cta > .bookmark {
@@ -203,7 +209,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 999px;
-  border: 2px solid #ffffff55;
+  border: 2px solid #030303;
   display: grid;
   place-items: center;
 }
@@ -216,7 +222,7 @@ body {
   width: 24px;
   height: 24px;
   stroke-width: 2;
-  color: #ffffff99;
+  color: #020202;
 }
 
 .pagination .progress-sub-container {
