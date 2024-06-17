@@ -482,8 +482,6 @@ body {
   line-height: 1.125rem;
   font-weight: 400;
   letter-spacing: normal;
-  /* border-top: solid 1px #cccccc; */
-  /* padding-top: 10px; */
 }
 
 .tp-flight-plan .fly-wrap .arrival-info .duration-info {
@@ -597,6 +595,9 @@ body {
     background: #fff;
     width: 30rem;
     height: calc(100vh - 9.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .header .navbar.active {
@@ -609,6 +610,8 @@ body {
     margin: 1.5rem;
     padding: .5rem;
     font-size: 2rem;
+    width: 100%;
+    text-align: left;
   }
 }
 

@@ -446,57 +446,62 @@ section {
 @media (max-width: 991px) {
     
   html {
-      font-size: 55%;
+    font-size: 55%;
   }
 
   .header {
-      padding: 1.5rem 2rem;
+    padding: 1.5rem 2rem;
   }
 
   section {
-      padding: 2rem;
+    padding: 2rem;
   }
 }
 
 @media (max-width: 768px) {
   .header .navbar {
-      position: absolute;
-      top: 100%;
-      right: -100%;
-      background: #fff;
-      width: 30rem;
-      height: calc(100vh - 9.5rem);
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: #fff;
+    width: 30rem;
+    height: calc(100vh - 9.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .header .navbar.active {
-      right: 0;
+    right: 0;
   }
 
   .header .navbar a {
-      color: var(--black);
-      display: block;
-      margin: 1.5rem;
-      padding: .5rem;
-      font-size: 2rem;
+    color: var(--black);
+    display: block;
+    margin: 1.5rem;
+    padding: .5rem;
+    font-size: 2rem;
+    width: 100%;
+    text-align: left;
   }
 
   .header .search-form {
-      width: 90%;
-      right: 2rem;
+    width: 90%;
+    right: 2rem;
   }
 
   .home {
-      background-position: left;
-      justify-content: center;
-      text-align: center;
+    background-position: left;
+    justify-content: center;
+    text-align: center;
   }
 
   .home .content h3 {
-      font-size: 4.5rem;
+    font-size: 4.5rem;
   }
 
   .home .content p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
   
 }
@@ -504,7 +509,7 @@ section {
 @media (max-width: 450px) {
   
   html {
-      font-size: 50%;
+    font-size: 50%;
   }
 
 }

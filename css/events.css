@@ -174,6 +174,9 @@ body {
     background: #fff;
     width: 30rem;
     height: calc(100vh - 9.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .header .navbar.active {
@@ -181,11 +184,13 @@ body {
   }
 
   .header .navbar a {
-    color: var(--black);
-    display: block;
-    margin: 1.5rem;
-    padding: .5rem;
-    font-size: 2rem;
+      color: var(--black);
+      display: block;
+      margin: 1.5rem;
+      padding: .5rem;
+      font-size: 2rem;
+      width: 100%;
+      text-align: left;
   }
 
   .home {
