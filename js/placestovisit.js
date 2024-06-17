@@ -1,4 +1,12 @@
 const data = [
+    {
+      place:'Malta',
+      title:'Travel',
+      title2:'Guide',
+      description:'The Republic of Malta, is an island country in Southern Europe, located in the Mediterranean Sea. It consists of an archipelago between Italy, Tunisia and Libya.',
+      image:'https://i.pinimg.com/originals/b6/b0/57/b6b0572f76abd5d7181e4f321e2f9bd1.jpg',
+      link: 'placestovisit.html'
+  },
   {
       place:'Valletta',
       title:'Capital',
@@ -115,7 +123,7 @@ function animate(target, duration, properties) {
   });
 }
 
-let order = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+let order = [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 let detailsEven = true;
 
 let offsetTop = 200;
@@ -344,15 +352,6 @@ function transitionCards(detailsInactive) {
       gsap.to(getSliderItem(i), { x: (index + 1) * numberSize, ease });
     }
   });
-}
-
-
-async function loop() {
-await animate(".indicator", 1, { opacity: 1 });
-await animate(".indicator", 4, { x: window.innerWidth, delay: 0.3 });
-set(".indicator", { x: -window.innerWidth });
-await step();
-loop();
 }
 
 async function loadImage(src) {
