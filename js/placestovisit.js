@@ -53,7 +53,7 @@ const data = [
       title2:'Mediterranean Sea',
       description:'Gozo  is an island in the Maltese archipelago in the Mediterranean Sea. The island is part of the Republic of Malta. After the island of Malta itself, it is the second-largest island in the archipelago.',
       image:'https://i.pinimg.com/564x/ac/66/41/ac664145dcdc6f9ffc431ff6e288b422.jpg',
-      link:'Gozo.html'
+      link:'gozo.html'
   },
   {
       place:'comino',
