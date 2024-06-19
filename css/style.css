@@ -102,10 +102,36 @@ section {
   height: 6rem;
 }
 
-.header .navbar a{
-  margin: 0 0.5rem;
-  font-size: 1.6rem;
-  color: #fff;
+.header .icons {
+  display: flex; /* Ensure icons are displayed horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.header .navbar {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  background: #fff;
+  width: 30rem;
+  height: calc(100vh - 9.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 999; /* Ensure it is above other content */
+}
+
+.header .navbar.active {
+  right: 0;
+}
+
+.header .navbar a {
+  color: var(--black);
+  display: block;
+  margin: 1.5rem;
+  padding: .5rem;
+  font-size: 2rem;
+  width: 100%;
+  text-align: left;
 }
 
 .header .navbar a:hover{
@@ -145,6 +171,7 @@ section {
   align-items: center;   
   transform: scaleY(0);
   transform-origin: top;
+  z-index: 1001; /* Ensure it is above other content */
 }
 
 .header .search-form.active {
@@ -466,30 +493,38 @@ main {
 }
 
 @media (max-width: 768px) {
-  .header .navbar {
+  .menu-btn {
+    display: block; /* Show hamburger menu for smaller screens */
+    position: relative;
+    z-index: 1001; /* Ensure it's above other elements */
+  }
+
+  .navbar {
     position: absolute;
     top: 100%;
     right: -100%;
     background: #fff;
     width: 30rem;
     height: calc(100vh - 9.5rem);
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease;
   }
 
-  .header .navbar.active {
+  .navbar.active {
     right: 0;
   }
 
-  .header .navbar a {
-    color: var(--black);
-    display: block;
-    margin: 1.5rem;
-    padding: .5rem;
+  .navbar a {
+    margin: 1rem;
     font-size: 2rem;
-    width: 100%;
-    text-align: left;
+    color: var(--black);
+    transition: color 0.3s ease;
+  }
+
+  .navbar a:hover {
+    color: var(--main-color);
   }
 
   .header .search-form {
