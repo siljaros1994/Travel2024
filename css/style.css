@@ -485,11 +485,11 @@ main {
   .header .navbar a {
     color: var(--black);
     display: block;
-    margin: 1.5rem;
+    margin: 1rem 0;
     padding: .5rem;
     font-size: 2rem;
     width: 100%;
-    text-align: left;
+    text-align: center;
   }
 
   .header .search-form {
