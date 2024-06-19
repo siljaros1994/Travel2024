@@ -1,7 +1,3 @@
-const cartContainer = document.querySelector('.header .cart-items-container');
-cartContainer.classList.toggle('visible');
-
-
 // ammount to add on each button press
 const confettiCount = 20
 const sequinCount = 10

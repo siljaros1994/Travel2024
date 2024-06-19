@@ -3,6 +3,9 @@ let searchForm = document.querySelector('.search-form');
 let cartItem = document.querySelector('.cart-items-container');
 let menuBtn = document.querySelector('#menu-btn');
 
+const cartContainer = document.querySelector('.header .cart-items-container');
+cartContainer.classList.toggle('visible');
+
 menuBtn.addEventListener('click', () => {
   navbar.classList.toggle('active');
   searchForm.classList.remove('active');

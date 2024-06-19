@@ -200,35 +200,19 @@ section {
 
 .header .cart-items-container {
   position: absolute;
-  top: 100%; /* Position below header */
-  right: -100%; /* Initially off-screen */
-  height: calc(100vh - 3.5rem); /* Adjusted height */
-  width: 35rem; /* Fixed width */
-  background: #fff; /* Background color */
-  padding: 0 1.5rem; /* Padding */
+  top: 100%;
+  right: -100%;
+  height: calc(100vh - 3.5rem);
+  width: 35rem;
+  background: #fff;
+  padding: 0 1.5rem;
   overflow-y: auto; /* Allow scrolling if items overflow */
-  transition: right 0.3s ease; /* Smooth transition for visibility */
-  z-index: 10; /* Ensure it's above other content */
+  transition: right 0.3s ease;
 }
 
-#canvas {
-  position: absolute;
-  top: -80px; /* Adjust the top position to move it higher */
-  left: -150px; /* Adjust the left position to move it to the left */
-  width: 100%;
-  height: 100%;
-  z-index: 1; /* Ensure it's behind other content */
+.header .cart-items-container.active {
+  right: 0;
 }
-
-canvas {
-  pointer-events: none;
-}
-
-
-.header .cart-items-container.visible {
-  right: 0; /* Bring the container into view */
-}
-
 
 .header .cart-items-container .cart-item {
   position: relative;
@@ -513,6 +497,19 @@ main {
 
 body {
   -webkit-font-smoothing: antialiased;
+}
+
+#canvas {
+  position: absolute;
+  top: -80px; /* Adjust the top position to move it higher */
+  left: -150px; /* Adjust the left position to move it to the left */
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensure it's behind other content */
+}
+
+canvas {
+  pointer-events: none;
 }
 
 button {
