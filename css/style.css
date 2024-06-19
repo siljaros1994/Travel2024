@@ -200,19 +200,35 @@ section {
 
 .header .cart-items-container {
   position: absolute;
-  top: 100%;
-  right: -100%;
-  height: calc(100vh - 3.5rem);
-  width: 35rem;
-  background: #fff;
-  padding: 0 1.5rem;
+  top: 100%; /* Position below header */
+  right: -100%; /* Initially off-screen */
+  height: calc(100vh - 3.5rem); /* Adjusted height */
+  width: 35rem; /* Fixed width */
+  background: #fff; /* Background color */
+  padding: 0 1.5rem; /* Padding */
   overflow-y: auto; /* Allow scrolling if items overflow */
-  transition: right 0.3s ease;
+  transition: right 0.3s ease; /* Smooth transition for visibility */
+  z-index: 10; /* Ensure it's above other content */
 }
 
-.header .cart-items-container.active {
-  right: 0;
+#canvas {
+  position: absolute;
+  top: -80px; /* Adjust the top position to move it higher */
+  left: -150px; /* Adjust the left position to move it to the left */
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensure it's behind other content */
 }
+
+canvas {
+  pointer-events: none;
+}
+
+
+.header .cart-items-container.visible {
+  right: 0; /* Bring the container into view */
+}
+
 
 .header .cart-items-container .cart-item {
   position: relative;
@@ -258,6 +274,16 @@ section {
 .header .cart-items-container .cart-item .content span {
   font-size: 1.4rem;
   color: var(--main-color);
+}
+
+.cart-items-container .cart-total {
+  text-align: right;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.cart-items-container h3 {
+  color: #000000; /* Replace with your desired color code */
 }
 
 main {
@@ -393,7 +419,7 @@ main {
 }
 
 .thingstoDo .box-container .box .image img {
-  height: 25rem ;
+  height: 22rem ;
 }
 
 .thingstoDo .box-container .box .content h3 {
@@ -476,6 +502,177 @@ main {
 .footer .credit span {
   color: var(--main-color);
 }
+
+/*button cart*/
+
+@keyframes loading {
+  0%   { cy: 10; }
+  25%  { cy: 3; }
+  50%  { cy: 10; }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  background: none;
+  color: #f4f7ff;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 50px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 10px;
+  position: fixed;
+  width: 190px;
+
+  &::before {
+    background: #d3ad7f;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .4) inset;
+    content: '';
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    transition: width .2s cubic-bezier(.39,1.86,.64,1) .3s;
+    width: 100%;
+  }
+}
+
+/* READY STATE*/
+button.ready {
+  .submitMessage svg {
+    opacity: 1;
+    top: 1px;
+    transition: top .4s ease 600ms, opacity .3s linear 600ms;
+  }
+
+  .submitMessage .button-text span {
+    top: 0;
+    opacity: 1;
+    transition: all .2s ease calc(var(--dr) + 600ms);
+  }
+}
+
+/* LOADING STATE */
+button.loading {
+  &::before {
+    transition: width .3s ease;
+    width: 80%;
+  }
+
+  .loadingMessage {
+    opacity: 1;
+  }
+
+  .loadingCircle {
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-name: loading;
+    cy: 10;
+  }
+}
+
+/* COMPLETE STATE */
+button.complete {
+  .submitMessage svg {
+    top: -30px;
+    transition: none;
+  }
+
+  .submitMessage .button-text span {
+    top: -8px;
+    transition: none;
+  }
+
+  .loadingMessage {
+    top: 80px;
+  }
+
+  .successMessage .button-text span {
+    left: 0;
+    opacity: 1;
+    transition: all .2s ease calc(var(--d) + 1000ms);
+  }
+
+  .successMessage svg { 
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset .3s ease-in-out 1.4s;
+  }
+}
+
+.button-text span {
+  opacity: 0;
+  position: relative;
+}
+
+.message {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.message svg {
+  display: inline-block;
+  fill: none;
+  margin-right: 5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.submitMessage {
+  .button-text span {
+    top: 8px;
+    transition: all .2s ease var(--d);
+  }
+
+  svg {
+    color: #5c86ff;
+    margin-left: -1px;
+    opacity: 0;
+    position: relative;
+    top: 30px;
+    transition: top .4s ease, opacity .3s linear;
+    width: 14px;
+  }
+}
+
+.loadingMessage {
+  opacity: 0;
+  transition: opacity .3s linear .3s, top .4s cubic-bezier(.22,0,.41,-0.57);
+
+  svg {
+    fill: #5c86ff;
+    margin: 0;
+    width: 22px;
+  }
+}
+
+.successMessage {
+  .button-text span {
+    left: 5px;
+    transition: all .2s ease var(--dr);
+  }
+  
+  svg {
+    color: #5cffa1;
+    stroke-dasharray: 20;
+    stroke-dashoffset: 20;
+    transition: stroke-dashoffset .3s ease-in-out;
+    width: 14px;
+  }
+}
+
+.loadingCircle:nth-child(2) { animation-delay: .1s }
+.loadingCircle:nth-child(3) { animation-delay: .2s }
+
 
 @media (max-width: 991px) {
     

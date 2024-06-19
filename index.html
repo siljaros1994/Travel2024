@@ -37,32 +37,33 @@
         <label for="search-box" class="fas fa-search"></label>
     </div>
 
-    <div class="cart-items-container">
-
-    <div class="cart-item">
-        <span class="fas fa-times"></span>
-
-        <div class="content">
-            <h3>cart item 01</h3>
-            <div class="price">€ 0.00</div>
+    <div class="cart-items-container" id="cart-items-container">
+      <!-- Cart items will be injected here dynamically -->
+      <div id="cart-total" class="cart-total">
+        <h3>Total: €<span id="total-price">0.00</span></h3>
+      </div>
+      <button id="button" class="ready" onclick="clickButton();">
+        <div class="message submitMessage">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 12.2">
+            <polyline stroke="currentColor" points="2,7.1 6.5,11.1 11,7.1 "/>
+            <line stroke="currentColor" x1="6.5" y1="1.2" x2="6.5" y2="10.3"/>
+          </svg> <span class="button-text">Checkout Now</span>
         </div>
-    </div>
-
-    <div class="cart-item">
-        <span class="fas fa-times"></span>
-        <div class="content">
-            <h3>cart item 02</h3>
+        <div class="message loadingMessage">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 17">
+            <circle class="loadingCircle" cx="2.2" cy="10" r="1.6"/>
+            <circle class="loadingCircle" cx="9.5" cy="10" r="1.6"/>
+            <circle class="loadingCircle" cx="16.8" cy="10" r="1.6"/>
+          </svg>
         </div>
-    </div>
-
-    <div class="cart-item">
-        <span class="fas fa-times"></span>
-        <div class="content">
-            <h3>cart item 03</h3>
+        <div class="message successMessage">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11">
+            <polyline stroke="currentColor" points="1.4,5.8 5.1,9.5 11.6,2.1 "/>
+          </svg> <span class="button-text">Success</span>
         </div>
-    </div>
-
-      <a href="#" class="btn">checkout now</a>
+      </button>
+      
+      <canvas id="canvas"></canvas>
     </div>
   </header>
 
@@ -106,12 +107,12 @@
   </section>
 
   <section class="thingstoDo" id="thingstoDo">
-    <h1 class="heading"> Things To Do In<span> Valletta</span></h1>
+    <h1 class="heading"> Things To Do<span> See price</span></h1>
     <div class="box-container">
   
       <div class="box">
         <div class="icons">
-          <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+          <a href="#" class="fas fa-shopping-cart add-to-cart" data-name="Cocktail Bar" data-price="0.00" data-image="images/cocktail.png"></a>
           <a href="#" class="fas fa-heart"></a>
           <a href="#" class="fas fa-eye"></a>
         </div>
@@ -133,7 +134,7 @@
   
       <div class="box">
         <div class="icons">
-          <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+          <a href="#" class="fas fa-shopping-cart add-to-cart" data-name="Quad Bike" data-price="115.00" data-image="images/bike.jpg"></a>
           <a href="#" class="fas fa-heart"></a>
           <a href="#" class="fas fa-eye"></a>
         </div>
@@ -156,7 +157,7 @@
   
       <div class="box">
         <div class="icons">
-          <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+          <a href="#" class="fas fa-shopping-cart add-to-cart" data-name="Boat Trip" data-price="25.00" data-image="images/batur.jpg"></a>
           <a href="#" class="fas fa-heart"></a>
           <a href="#" class="fas fa-eye"></a>
         </div>
@@ -205,5 +206,6 @@
   <!-- footer section ends -->
 
   <script src="js/script.js"></script>
+  <script src="js/buttoncart.js"></script>
 </body>
 </html>
