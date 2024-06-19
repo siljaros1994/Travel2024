@@ -83,18 +83,41 @@ section {
   letter-spacing: .2rem;
 }
 
-.header{
+.header {
   background: var(--bg);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding:1rem 5%;
+  padding: 1rem 5%;
   border-bottom: var(--border);
-  position: fixed;
+  position: fixed; /* Fixed position to keep it at the top */
   top: 0;
-  left:0;
-  right:0;
+  left: 0;
+  right: 0;
   z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  margin: 0 15px; /* Adjust spacing between links */
+  font-size: 1.4rem;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+}
+
+.navbar .active {
+  color: var(--main-color);
+  border-bottom: .1rem solid var(--main-color);
+  padding-bottom: .3rem;
 }
 
 .header .logo img{
