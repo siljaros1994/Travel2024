@@ -7,13 +7,14 @@
   --border: .1rem solid rgba(255, 255, 255, .3);
 }
 
-*{
+* {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
   border: none;
+  list-style: none;
   text-decoration: none;
   transition: .2s linear;
 }
@@ -44,8 +45,11 @@ html::-webkit-scrollbar-thumb{
   border-radius: 5rem;
 }
 
-body{
-  background: var(--bg);
+body {
+  background-color: #1a1a1a;
+  color: #f5f1f1dd;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
 }
 
 section {
@@ -84,7 +88,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding:1.5rem 7%;
+  padding:1rem 5%;
   border-bottom: var(--border);
   position: fixed;
   top: 0;
@@ -226,6 +230,10 @@ section {
 .header .cart-items-container .cart-item .content span {
   font-size: 1.4rem;
   color: var(--main-color);
+}
+
+main {
+  padding-top: 6rem; /* to avoid overlap with header */
 }
 
 .home {
@@ -386,8 +394,6 @@ section {
 }
 
 /* vantar fyrir ofan */
-
-
 
 .footer {
   background: var(--black);
