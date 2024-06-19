@@ -475,6 +475,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    transition: right 0.3s ease;
   }
 
   .header .navbar.active {
