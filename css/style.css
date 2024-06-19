@@ -84,6 +84,7 @@ section {
 }
 
 .header{
+  position: absolute;
   background: var(--bg);
   display: flex;
   align-items: center;
