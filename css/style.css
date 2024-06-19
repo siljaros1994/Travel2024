@@ -14,7 +14,7 @@
   box-sizing: border-box;
   outline: none;
   border: none;
-  list-style: none;
+  /*list-style: none;*/
   text-decoration: none;
   transition: .2s linear;
 }
@@ -25,7 +25,7 @@
 
 }
 
-html{
+/*html{
   font-size: 85.5%;
   overflow-x: hidden;
   scroll-padding-top: 9rem;
@@ -43,12 +43,12 @@ html::-webkit-scrollbar-track{
 html::-webkit-scrollbar-thumb{
   background: #fff;
   border-radius: 5rem;
-}
+}*/
 
 body {
   background-color: #1a1a1a;
   color: #f5f1f1dd;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
   font-family: 'Inter', sans-serif;
 }
 
@@ -102,7 +102,7 @@ section {
 }
 
 .header .navbar a{
-  margin:0 1rem;
+  margin: 0 0.5rem;
   font-size: 1.6rem;
   color: #fff;
 }
@@ -475,7 +475,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    transition: right 0.3s ease;
   }
 
   .header .navbar.active {
@@ -485,11 +484,11 @@ main {
   .header .navbar a {
     color: var(--black);
     display: block;
-    margin: 1rem 0;
+    margin: 1.5rem;
     padding: .5rem;
     font-size: 2rem;
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 
   .header .search-form {
