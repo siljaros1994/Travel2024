@@ -468,7 +468,7 @@ main {
   .header .navbar {
     position: absolute;
     top: 100%;
-    right: -100%;
+    right: -15%;
     background: #fff;
     width: 30rem;
     height: calc(100vh - 9.5rem);
