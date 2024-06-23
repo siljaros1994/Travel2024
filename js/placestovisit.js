@@ -16,12 +16,12 @@ const data = [
       link: 'valletta.html'
   },
   {
-      place:'Mellieha',
+      place:'Mdina',
       title:'Northern',
       title2:'Region',
-      description:'Mellieha is a large village in the Northern Region of Malta. Mellieħa is also a tourist resort, popular for its sandy beaches, natural environment, and Popeye Village nearby',
-      image:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Mellieha_Church.jpg/2880px-Mellieha_Church.jpg',
-      link: 'mellieha.html'
+      description:'Mdina is a fortified city, which served as the island\'s capital from antiquity to the medieval period. The city is still confined within its walls',
+      image:'https://historichotelsofeurope.com/wp-content/uploads/2023/11/malta-mdina.jpg',
+      link:'mdina.html' 
   },
   {
       place:'Saint Julian\'s',
@@ -64,12 +64,12 @@ const data = [
       link:'comino.html'
   },
   {
-      place:'Mdina',
+      place:'Mellieha',
       title:'Northern',
       title2:'Region',
-      description:'Mdina is a fortified city, which served as the island\'s capital from antiquity to the medieval period. The city is still confined within its walls',
-      image:'https://historichotelsofeurope.com/wp-content/uploads/2023/11/malta-mdina.jpg',
-      link:'mdina.html'
+      description:'Mellieha is a large village in the Northern Region of Malta. Mellieħa is also a tourist resort, popular for its sandy beaches, natural environment, and Popeye Village nearby',
+      image:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Mellieha_Church.jpg/2880px-Mellieha_Church.jpg',
+      link: 'mellieha.html' 
   },
 ]
 
